@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react'
 import StateCounter from './components/UseState/StateCounter';
 import StateObject from './components/UseState/StateObject';
 import StateArray from './components/UseState/StateArray';
@@ -8,6 +9,10 @@ import EffectMouse from './components/UseEffect/EffectMouse';
 import MouseContainer from './components/UseEffect/MouseContainer';
 import IntervalHookCounter from './components/UseEffect/IntervalHookCounter';
 import DataFetching from './components/UseEffect/DataFetching';
+import ComponentF from './components/UseContext/ComponentF';
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 function App() {
   return (
@@ -19,7 +24,12 @@ function App() {
       {/* <EffectMouse /> */}
       {/* <MouseContainer /> */}
       {/* <IntervalHookCounter /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      <UserContext.Provider value='Bruce'>
+        <ChannelContext.Provider value='Clark'>
+          <ComponentF />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
