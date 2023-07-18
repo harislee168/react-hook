@@ -11,6 +11,7 @@ import IntervalHookCounter from './components/UseEffect/IntervalHookCounter';
 import DataFetching from './components/UseEffect/DataFetching';
 import ComponentF from './components/UseContext/ComponentF';
 import ReducerCount from './components/UseReducer/ReducerCount';
+import ReducerCountTwo from './components/UseReducer/ReducerCountTwo';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -31,7 +32,8 @@ function App() {
           <ComponentF />
         </ChannelContext.Provider>
       </UserContext.Provider> */}
-      <ReducerCount />
+      {/* <ReducerCount /> */}
+      <ReducerCountTwo />
     </div>
   );
 }
