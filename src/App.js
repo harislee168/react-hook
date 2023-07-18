@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import StateCounter from './components/StateCounter';
-import StateObject from './components/StateObject';
+import StateCounter from './components/UseState/StateCounter';
+import StateObject from './components/UseState/StateObject';
+import StateArray from './components/UseState/StateArray';
+import EffectCounter from './components/UseEffect/EffectCounter';
 
 function App() {
   return (
     <div className="App">
       {/* <StateCounter /> */}
-      <StateObject />
+      {/* <StateObject /> */}
+      {/* <StateArray /> */}
+      <EffectCounter />
     </div>
   );
 }
