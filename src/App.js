@@ -19,6 +19,8 @@ import ComponentF from './components/UseReducer/UseContext/ComponentF';
 import ReducerDataFetching from './components/UseReducer/ReducerDataFetching';
 import CallbackParent from './components/UseCallback/CallbackParent';
 import UseMemoCounter from './components/UseMemo/UseMemoCounter';
+import FocusInput from './components/UseRef/FocusInput';
+import RefCounter from './components/UseRef/RefCounter';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -68,7 +70,9 @@ function App() {
       </div> */}
       {/* <ReducerDataFetching /> */}
       {/* <CallbackParent /> */}
-      <UseMemoCounter />
+      {/* <UseMemoCounter /> */}
+      {/* <FocusInput /> */}
+      <RefCounter />
     </div>
   );
 }
