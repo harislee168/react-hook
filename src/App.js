@@ -10,6 +10,7 @@ import MouseContainer from './components/UseEffect/MouseContainer';
 import IntervalHookCounter from './components/UseEffect/IntervalHookCounter';
 import DataFetching from './components/UseEffect/DataFetching';
 import ComponentF from './components/UseContext/ComponentF';
+import ReducerCount from './components/UseReducer/ReducerCount';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -25,11 +26,12 @@ function App() {
       {/* <MouseContainer /> */}
       {/* <IntervalHookCounter /> */}
       {/* <DataFetching /> */}
-      <UserContext.Provider value='Bruce'>
+      {/* <UserContext.Provider value='Bruce'>
         <ChannelContext.Provider value='Clark'>
           <ComponentF />
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+      <ReducerCount />
     </div>
   );
 }
