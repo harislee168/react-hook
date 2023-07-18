@@ -12,6 +12,7 @@ import DataFetching from './components/UseEffect/DataFetching';
 import ComponentF from './components/UseContext/ComponentF';
 import ReducerCount from './components/UseReducer/ReducerCount';
 import ReducerCountTwo from './components/UseReducer/ReducerCountTwo';
+import ReducerCountThree from './components/UseReducer/ReducerCountThree';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -33,7 +34,7 @@ function App() {
         </ChannelContext.Provider>
       </UserContext.Provider> */}
       {/* <ReducerCount /> */}
-      <ReducerCountTwo />
+      <ReducerCountThree />
     </div>
   );
 }
