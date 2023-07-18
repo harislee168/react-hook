@@ -21,6 +21,11 @@ import CallbackParent from './components/UseCallback/CallbackParent';
 import UseMemoCounter from './components/UseMemo/UseMemoCounter';
 import FocusInput from './components/UseRef/FocusInput';
 import RefCounter from './components/UseRef/RefCounter';
+import DocTitleOne from './components/CustomHook/DocTitleOne';
+import DocTitleTwo from './components/CustomHook/DocTitleTwo';
+import CounterOne from './components/CustomHook/CounterOne';
+import CounterTwo from './components/CustomHook/CounterTwo';
+import UserForm from './components/CustomHook/UserForm';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -72,7 +77,12 @@ function App() {
       {/* <CallbackParent /> */}
       {/* <UseMemoCounter /> */}
       {/* <FocusInput /> */}
-      <RefCounter />
+      {/* <RefCounter /> */}
+      {/* <DocTitleOne />
+      <DocTitleTwo /> */}
+      {/* <CounterOne />
+      <CounterTwo /> */}
+      <UserForm />
     </div>
   );
 }
