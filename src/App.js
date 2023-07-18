@@ -18,6 +18,7 @@ import ComponentD from './components/UseReducer/UseContext/ComponentD';
 import ComponentF from './components/UseReducer/UseContext/ComponentF';
 import ReducerDataFetching from './components/UseReducer/ReducerDataFetching';
 import CallbackParent from './components/UseCallback/CallbackParent';
+import UseMemoCounter from './components/UseMemo/UseMemoCounter';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -66,7 +67,8 @@ function App() {
         </CounterContext.Provider>
       </div> */}
       {/* <ReducerDataFetching /> */}
-      <CallbackParent />
+      {/* <CallbackParent /> */}
+      <UseMemoCounter />
     </div>
   );
 }
