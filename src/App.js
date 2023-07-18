@@ -17,6 +17,7 @@ import ComponentA from './components/UseReducer/UseContext/ComponentA';
 import ComponentD from './components/UseReducer/UseContext/ComponentD';
 import ComponentF from './components/UseReducer/UseContext/ComponentF';
 import ReducerDataFetching from './components/UseReducer/ReducerDataFetching';
+import CallbackParent from './components/UseCallback/CallbackParent';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
@@ -64,7 +65,8 @@ function App() {
           <ComponentF />
         </CounterContext.Provider>
       </div> */}
-      <ReducerDataFetching />
+      {/* <ReducerDataFetching /> */}
+      <CallbackParent />
     </div>
   );
 }
