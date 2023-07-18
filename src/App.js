@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react'
+import React, {useReducer} from 'react'
 import StateCounter from './components/UseState/StateCounter';
 import StateObject from './components/UseState/StateObject';
 import StateArray from './components/UseState/StateArray';
@@ -9,15 +9,35 @@ import EffectMouse from './components/UseEffect/EffectMouse';
 import MouseContainer from './components/UseEffect/MouseContainer';
 import IntervalHookCounter from './components/UseEffect/IntervalHookCounter';
 import DataFetching from './components/UseEffect/DataFetching';
-import ComponentF from './components/UseContext/ComponentF';
+// import ComponentF from './components/UseContext/ComponentF';
 import ReducerCount from './components/UseReducer/ReducerCount';
 import ReducerCountTwo from './components/UseReducer/ReducerCountTwo';
 import ReducerCountThree from './components/UseReducer/ReducerCountThree';
+import ComponentA from './components/UseReducer/UseContext/ComponentA';
+import ComponentD from './components/UseReducer/UseContext/ComponentD';
+import ComponentF from './components/UseReducer/UseContext/ComponentF';
 
 export const UserContext = React.createContext()
 export const ChannelContext = React.createContext()
+export const CounterContext = React.createContext()
+
+const initialState = 0
+const reducer = (currentState, action) =>{
+  console.log('hello reducer')
+  switch(action) {
+    case 'add':
+      return currentState + 1
+    case 'reduce':
+      return currentState - 1
+    case 'reset':
+      return initialState
+    default:
+      return currentState
+  }
+}
 
 function App() {
+  const [newState, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
       {/* <StateCounter /> */}
@@ -34,7 +54,15 @@ function App() {
         </ChannelContext.Provider>
       </UserContext.Provider> */}
       {/* <ReducerCount /> */}
-      <ReducerCountThree />
+      {/* <ReducerCountThree /> */}
+      {/* <div>
+        <div>Count: {newState}</div>
+        <CounterContext.Provider value={{countState: newState, countDispatch: dispatch}}>
+          <ComponentA />
+          <ComponentD />
+          <ComponentF />
+        </CounterContext.Provider>
+      </div> */}
     </div>
   );
 }
